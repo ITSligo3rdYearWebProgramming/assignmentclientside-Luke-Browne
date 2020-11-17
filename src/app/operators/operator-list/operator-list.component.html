@@ -1,0 +1,15 @@
+<div>Operator-list works!
+
+  
+  <h2 *ngIf="message">{{message}}</h2>
+
+ 
+    <app-operator-row *ngFor="let o of operatorList"
+    [operator]="o"
+    (click)='clicked(o)'></app-operator-row>
+
+    <app-operator-details *ngIf="currentOperator" [operator]="currentOperator">
+
+    </app-operator-details>
+
+</div>
