@@ -1,0 +1,23 @@
+.header{
+    font-size: 400%;
+    padding-top: 0.1em;
+    font-weight: 600;
+}
+
+.container{
+    padding-bottom: 3em;
+}
+
+h2{
+    text-align: center;
+}
+
+.lmao{
+    min-width: 95%;
+    border: 1px solid black;
+}
+
+.lmao3{
+    border: 1px solid black;
+    text-align: center;
+}

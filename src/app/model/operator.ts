@@ -4,6 +4,6 @@ export interface IOperator {
     opName: String,
     ctu: String,
     icon: String,
-    id: String
+    id: string
 
 }

@@ -13,6 +13,9 @@ import { CtuDetailsComponent } from './ctus/ctu-details/ctu-details.component';
 import { CtuRowComponent } from './ctus/ctu-row/ctu-row.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { OperatorFormComponent } from './operators/operator-form/operator-form.component';
 
 @NgModule({
   declarations: [
@@ -25,12 +28,16 @@ import { HttpClientModule } from '@angular/common/http';
     LoadoutRowComponent,
     CtuListComponent,
     CtuDetailsComponent,
-    CtuRowComponent
+    CtuRowComponent,
+    OperatorFormComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

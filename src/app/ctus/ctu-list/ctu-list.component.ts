@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ICtu } from '../../model/ctu';
+import { CtuService } from '../../ctu.service';
 
 @Component({
   selector: 'app-ctu-list',
@@ -7,9 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CtuListComponent implements OnInit {
 
-  constructor() { }
+  ctuList: ICtu[];
+  message: string;
+
+  currentCtu: ICtu;
+
+  constructor(private ctuService : CtuService) { }
 
   ngOnInit(): void {
+    this.ctuService.getCtus().subscribe({
+      next: (value: ICtu[] )=> this.ctuList = value,
+      complete: () => console.log('ctu service finished'),
+      error: (mess) => this.message = mess
+    })
   }
 
 }

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { ICtu } from '../../model/ctu';
 
 @Component({
   selector: 'app-ctu-details',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./ctu-details.component.css']
 })
 export class CtuDetailsComponent implements OnInit {
+
+  @Input() ctu : ICtu;
 
   constructor() { }
 

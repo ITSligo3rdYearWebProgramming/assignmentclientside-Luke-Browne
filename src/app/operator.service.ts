@@ -13,8 +13,21 @@ export class OperatorService {
 
   constructor(private http: HttpClient) { }
 
+  addOperator(operator: IOperator): Observable<IOperator> {
+    return this.http.post<IOperator>(this.dataUri, operator)
+      .pipe(
+        catchError(this.handleError)
+      )
+  }
 
-
+  updateOperator(id: string, operator: IOperator): Observable<IOperator> {
+    console.log('subscribing to update' + id);
+    let operatorURI: string = this.dataUri + '/' + id;
+    return this.http.put<IOperator>(operatorURI, operator)
+      .pipe(
+        catchError(this.handleError)
+      )
+  }
 
   getOperators(): Observable<IOperator[]> {
 
@@ -40,6 +53,14 @@ export class OperatorService {
       console.error(
         `Backend returned code ${error.status}, ` +
         `body was: ${error.error}`);
+
+      // question over how much information you want to give to the end-user
+      // it depends on who will be using the system
+      // this information would not be returned in a public interface but might in an intranet.
+
+      if (error.status == 412) {
+        return throwError('412 Error' + JSON.stringify(error.error))
+      }
     }
     // Return an observable with a user-facing error message.
     return throwError(

@@ -1,1 +1,12 @@
-<p>ctu-list works!</p>
+<div>
+    <h2 *ngIf="message">{{message}}</h2>
+  
+   
+      <app-ctu-row *ngFor="let c of ctuList"
+      [ctu]="c"
+      (click)='clicked(c)'></app-ctu-row>
+  
+      <app-ctu-details *ngIf="currentCtu" [loadout]="currentCtu">
+  
+      </app-ctu-details>
+  </div>

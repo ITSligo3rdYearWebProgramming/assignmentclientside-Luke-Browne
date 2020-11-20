@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { ICtu } from 'src/app/model/ctu';
 
 @Component({
   selector: 'app-ctu-row',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./ctu-row.component.css']
 })
 export class CtuRowComponent implements OnInit {
+
+  @Input() ctu : ICtu;
 
   constructor() { }
 

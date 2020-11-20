@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { ILoadout } from '../../model/loadout';
 
 @Component({
   selector: 'app-loadout-details',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./loadout-details.component.css']
 })
 export class LoadoutDetailsComponent implements OnInit {
+
+  @Input() loadout : ILoadout;
 
   constructor() { }
 

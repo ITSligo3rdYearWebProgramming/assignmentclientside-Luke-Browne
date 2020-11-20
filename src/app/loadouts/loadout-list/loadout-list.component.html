@@ -1,1 +1,12 @@
-<p>loadout-list works!</p>
+<div>
+    <h2 *ngIf="message">{{message}}</h2>
+  
+   
+      <app-loadout-row *ngFor="let l of loadoutList"
+      [loadout]="l"
+      (click)='clicked(l)'></app-loadout-row>
+  
+      <app-loadout-details *ngIf="currentLoadout" [loadout]="currentLoadout">
+  
+      </app-loadout-details>
+  </div>
