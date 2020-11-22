@@ -4,6 +4,9 @@ export interface IOperator {
     opName: String,
     ctu: String,
     icon: String,
+    country: String,
+    side: String,
+    role: String,
     id: string
 
 }

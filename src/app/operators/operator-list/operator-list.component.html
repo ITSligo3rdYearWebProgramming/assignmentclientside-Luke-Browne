@@ -1,12 +1,31 @@
-<div>
-  <h2 *ngIf="message">{{message}}</h2>
+<div class="navbar">
+  <button (click)="openAddOperator()" *ngIf="!showOperatorForm"
+  class="btn btn-lg btn-outline-dark" >Add Operator</button>
+  
+  <button (click)="openEditOperator()" *ngIf="!showOperatorForm" [disabled]="!currentOperator"
+  class="btn btn-lg btn-outline-dark" >Edit Operator</button>
+  
+  <button (click)="deleteOperator(currentOperator.id)" *ngIf="!showOperatorForm" [disabled]="!currentOperator"
+  class="btn btn-lg btn-outline-dark" >Delete Operator</button>
+  </div>
 
- 
-    <app-operator-row *ngFor="let o of operatorList"
-    [operator]="o"
-    (click)='clicked(o)'></app-operator-row>
+  <app-operator-details *ngIf="currentOperator" [operator]="currentOperator">
+  </app-operator-details>
+  
+  <div class="container">
+  
+    <app-operator-form *ngIf="showOperatorForm" 
+    (operatorFormClose)="operatorFormClose($event)" [operator]="currentOperator"></app-operator-form>
 
-    <app-operator-details *ngIf="currentOperator" [operator]="currentOperator">
+      <p>
+        <ngb-alert *ngIf="message" [dismissible]="true">
+          <strong>Warning!</strong> {{message}}
+        </ngb-alert>
+      </p>
 
-    </app-operator-details>
+        <app-operator-row class="card" *ngFor="let c of operatorList"
+        [operator]="c"
+        (click)='clicked(c)'
+        [class.bg-dark]="isSelected(c)" [class.text-white]="isSelected(c)">
+      </app-operator-row>  
 </div>

@@ -1,23 +1,28 @@
 .header{
     font-size: 400%;
-    padding-top: 0.1em;
+    padding-top: 0.35em;
     font-weight: 600;
+    color: white;
+    text-shadow: 2px 3px 5px #000, 2px 1px 5px #000, 2px 1px 5px #000, -2px 1px 5px #000;
+    padding-bottom: 0.5em;
 }
 
-.container{
-    padding-bottom: 3em;
+html{
+    background-image: url(https://media.playstation.com/is/image/SCEA/tom-clancys-rainbow-six-siege-smoke-bg-01-ps4-us-06dec18?$native_lg_nt$);
+    background-size: cover;
 }
-
-h2{
-    text-align: center;
+nav{
+    background-image: url(https://img.freepik.com/free-vector/dark-abstract-background-with-lines_79145-402.jpg?size=626&ext=jpg);
+    background-size: cover;
 }
-
-.lmao{
-    min-width: 95%;
-    border: 1px solid black;
+.links{
+    font-size: 200%;
+    font-weight: 600;
+    text-shadow: 2px 3px 5px #000, 2px 1px 5px #000, 2px 1px 5px #000, -2px 1px 5px #000;
+    padding-top: 0.5em;
+    border-left: 4px solid black;
+    padding-left: 6%;
 }
-
-.lmao3{
-    border: 1px solid black;
-    text-align: center;
+.link{
+    padding-bottom: 0.2em;
 }

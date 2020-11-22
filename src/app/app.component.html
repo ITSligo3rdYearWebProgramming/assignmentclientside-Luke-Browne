@@ -1,44 +1,25 @@
-<div class="container">
-
-    <div class="row">
-        <div class="col-3">
-            <img src="https://preview.redd.it/4knclf04fcr41.png?auto=webp&s=e167bb9e03f16deaf32f7431c3436c1426589ee6" height="120em">
-        </div>
-        <div class="col-9 header">
-            Rainbow Six: Siege Wiki
-        </div>
+<html>
+    <nav>
+            <div class="row">
+                <div class="col-2">
+                    <img src="https://preview.redd.it/4knclf04fcr41.png?auto=webp&s=e167bb9e03f16deaf32f7431c3436c1426589ee6" height="120em">
+                </div>
+                <div class="col-7 header">
+                    Rainbow Six: Siege Wiki
+                </div>
+                <div class="col-3 links">
+                    <div class="row link">
+                        <a routerLink="operator-list-component" routerLinkActive="active"> Operators </a>
+                    </div>
+                    <div class="row link">
+                        <a href="#"> CTUs </a>
+                    </div>
+                </div>
+            </div>
+    </nav>
+    
+    <div class="container">
+    
+    <router-outlet></router-outlet>
     </div>
-</div>
-
-
-<div class="container lmao">
-
-    <div class="row lmao2">
-        <div class="col-3">
-            <h2> CTUs </h2>
-        </div>
-        <div class="col-4">
-            <h2> Operators </h2>
-        </div>
-        <div class="col-5">
-            <h2> Loadouts </h2>
-        </div>
-    </div>
-
-    <div class="row lmao2">
-        <div class="col-3 lmao3">
-            <app-ctu-list></app-ctu-list>
-        </div>
-        <div class="col-4 lmao3">
-            <app-operator-list></app-operator-list>
-        </div>
-        <div class="col-5 lmao3">
-            <app-loadout-list></app-loadout-list>
-        </div>
-    </div>
-
-    <app-operator-form></app-operator-form>
-
-
-<router-outlet></router-outlet>
-</div>
+</html>

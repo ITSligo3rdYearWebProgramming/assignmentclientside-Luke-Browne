@@ -3,22 +3,37 @@
   </button>
 
 <form [formGroup]="operatorForm" (ngSubmit) = "onSubmit()">
-<div class="form-group" >
-    <label for="name"> Operator Name </label>
-    <input id="name" type="text" formControlName="name" class="form-control">
-</div>
-<div class="form-group" >
-    <label for="opName"> Code Name </label>
-
-    <input id="opName" type="text" formControlName="opName" class="form-control">
-</div>
-<div class="form-group">
-    <label for="ctu"> Operator CTU </label>
-    <input id="ctu" type="text" formControlName="ctu" class="form-control">
-</div>
-<div class="form-group">
+    <div class="row justify-content-center">
+        <div class="form-group" >
+            <label for="name"> Operator Name </label>
+            <input id="name" type="text" formControlName="name" class="form-control">
+        </div>
+        <div class="form-group" >
+            <label for="opName"> Code Name </label>
+            <input id="opName" type="text" formControlName="opName" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="ctu"> Operator CTU </label>
+            <input id="ctu" type="text" formControlName="ctu" class="form-control">
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="form-group">
+            <label for="side"> Attack/Defense </label>
+            <input id="side" type="text" formControlName="side" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="role"> Operator Role </label>
+            <input id="role" type="text" formControlName="role" class="form-control">
+        </div>
+    </div>
+<div class="form-group justify-content-center">
     <label for="icon"> Operator Icon Link </label>
     <input id="icon" type="text" formControlName="icon" class="form-control">
+</div>
+<div class="form-group justify-content-center">
+    <label for="country"> Operator Country Flag Link </label>
+    <input id="country" type="text" formControlName="country" class="form-control">
 </div>
 
 <button type="submit" [disabled]="!operatorForm.valid" class="btn btn-lg btn-primary"> Submit </button>
@@ -34,5 +49,14 @@
 </div>
 <div *ngIf="icon.invalid && icon.touched" class="alert alert-danger" >
     Operator Icon is required
-</div>
+</div> 
+<div *ngIf="role.invalid && role.touched" class="alert alert-danger" >
+    Operator Role is required
+</div> 
+<div *ngIf="side.invalid && side.touched" class="alert alert-danger" >
+    Operator Side is required
+</div> 
+<div *ngIf="country.invalid && country.touched" class="alert alert-danger" >
+    Operator Country is required
+</div> 
 </form>

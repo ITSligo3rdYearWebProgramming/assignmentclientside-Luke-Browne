@@ -1,2 +1,34 @@
-<p>operator-details works!</p>
-<p> All the details about {{operator.name}}</p>
+<div class="container">
+    <div class="row card-body">
+        <div class="box col">
+            <div class="col"> <h3 class="head"> Country </h3> </div>
+            <div class="col"> <img src="{{operator.country}}" alt="country image" height="45em"> </div>
+        </div>
+        <div class="box col">
+            <div class="col"> <h3 class="head"> Icon </h3> </div>
+            <div class="col icon"> <img src="{{operator.icon}}" alt="operator image" height="60em"> </div>
+        </div>
+        <div class="box col">
+            <div class="col"> <h3 class="head"> Operator Name </h3> </div>
+            <div class="col"> <h3> {{operator.opName}} </h3> </div>
+        </div>
+        <div class="box col">
+            <div class="col"> <h3 class="head"> Name </h3> </div>
+            <div class="col"> <h3> {{operator.name}} </h3> </div>
+        </div>
+    </div>
+    <div class="row card-body">
+        <div class="box col-2">
+            <div class="col"> <h3 class="head"> CTU </h3> </div>
+            <div class="col"> <h3> {{operator.ctu}} </h3> </div>
+        </div>
+        <div class="box col-2">
+            <div class="col"> <h3 class="head"> Attack/Defense </h3> </div>
+            <div class="col"> <h3> {{operator.side}} </h3> </div>
+        </div>
+        <div class="box col-3">
+            <div class="col"> <h3 class="head"> Role </h3> </div>
+            <div class="col"> <h3> {{operator.role}} </h3> </div>
+        </div>
+    </div>
+</div>
