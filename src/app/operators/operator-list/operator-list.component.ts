@@ -35,7 +35,7 @@ export class OperatorListComponent implements OnInit {
   }
 
   openEditOperator(): void {
-    this.currentOperator = null;
+    this.currentOperator = this.currentOperator;
     this.showOperatorForm = true;
   }
 
